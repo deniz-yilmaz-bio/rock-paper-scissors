@@ -38,3 +38,24 @@ function playRound(userChoice, computerChoice) {
     return "Invalid Choice.";
   }
 }
+
+function game() {
+  let userScore = 0;
+  let computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    let result = playRound();
+    console.log(result);
+    if (result.includes("win")) {
+      userScore += 1;
+    } else if (result.includes("lose")) {
+      computerScore += 1;
+    }
+  }
+  if (computerScore > userScore) {
+    return "You lose today!";
+  } else if (computerScore < userScore) {
+    return "You win today!";
+  } else {
+    return "There are no winners today.";
+  }
+}
