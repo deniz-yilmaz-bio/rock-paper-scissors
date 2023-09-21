@@ -50,6 +50,7 @@ function game() {
     } else if (result.includes("lose")) {
       computerScore += 1;
     }
+    console.log("You: " + userScore + "       Computer: " + computerScore);
   }
   if (computerScore > userScore) {
     return "You lose today!";
